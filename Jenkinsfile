@@ -9,5 +9,14 @@ pipeline{
         }
       }
     }
+
+    stage('Test'){
+      steps{
+        nodejs('Node'){
+          echo 'Testing Application.....'
+          sh 'npm test'
+        }
+      }
+    }
   }
 }
